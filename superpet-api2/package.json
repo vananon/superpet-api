@@ -1,0 +1,23 @@
+{
+  "name": "superpet-api",
+  "version": "1.0.0",
+  "description": "API REST de PawLog by SuperPet",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "author": "Grupo PawLog - SuperPet",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0",
+    "dotenv": "^16.4.5",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "express-rate-limit": "^7.2.0"
+  },
+  "keywords": []
+}
