@@ -1,7 +1,6 @@
 {
   "name": "superpet-api",
   "version": "1.0.0",
-  "description": "API REST de PawLog by SuperPet",
   "main": "src/app.js",
   "type": "module",
   "scripts": {

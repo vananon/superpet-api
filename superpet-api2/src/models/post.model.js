@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 
-// Subdocumento "autor" (objeto anidado). _id: false para no agregarle un id propio.
 const autorSchema = new mongoose.Schema(
   {
     nombre_mascota: { type: String },

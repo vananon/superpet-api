@@ -1,8 +1,4 @@
 import mongoose from 'mongoose';
-
-// Conecta a MongoDB usando las variables del .env.
-// Pasamos usuario/clave como OPCIONES (no dentro de la URI) para evitar
-// problemas con caracteres especiales de la contrasena (el "!").
 export const connectDB = async () => {
   const {
     MONGO_HOST,
@@ -14,8 +10,6 @@ export const connectDB = async () => {
   } = process.env;
 
   const uri = `mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}`;
-
-  // Eventos utiles para que veas en consola el estado de la conexion
   mongoose.connection.on('error', (err) => {
     console.error('Error de conexion con MongoDB:', err.message);
   });
@@ -29,6 +23,6 @@ export const connectDB = async () => {
     console.log(`Conectado a MongoDB -> ${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}`);
   } catch (err) {
     console.error('No se pudo conectar a MongoDB:', err.message);
-    process.exit(1); // detiene la app si la BD no responde
+    process.exit(1);
   }
 };
